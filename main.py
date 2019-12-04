@@ -29,6 +29,19 @@ class Spaceship(pygame.sprite.Sprite):
                 self.rect.x = SCREEN_WIDTH - self.rect.w
             self.rect.x += self.speed
 
+        if pressed_key[pygame.K_DOWN] or pressed_key[pygame.K_s]:
+            if self.rect.y + self.rect.h >= SCREEN_HEIGHT - self.rect.h:
+                self.rect.y =  SCREEN_HEIGHT - self.rect.height
+            self.rect.y += self.speed
+
+        if pressed_key[pygame.K_UP] or pressed_key[pygame.K_w]:
+            if self.rect.y <= SCREEN_HEIGHT/2:
+                self.rect.y = SCREEN_HEIGHT/2
+            self.rect.y -= self.speed
+
+
+
+
 ######### END SPACECHIP CLASS #########
 
 
